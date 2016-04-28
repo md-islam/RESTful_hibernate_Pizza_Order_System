@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+          
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/hibernateDB</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">157b</property>
+        
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+        
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop the existing tables and create new one -->
+        <property name="hbm2ddl.auto">update</property> 
+ 
+ 
+        <!-- Mention here all the model classes along with their package name -->
+        <!--  
+         <mapping class="edu.cs157b.hibernate.Student"/>  
+        <mapping class="edu.cs157b.hibernate.UserGroup"/>
+         <mapping class="edu.cs157b.hibernate.BankAccount"/>
+ <mapping class="edu.cs157b.hibernate.SavingsAccount"/>
+  <mapping class="edu.cs157b.hibernate.TimeDepositAccount"/>
+  <mapping class="edu.cs157b.hibernate.Users"/>
+   <mapping class="edu.cs157b.hibernate.Employee"/>
+         <mapping class="edu.cs157b.hibernate.Team"/>
+         <mapping class="edu.cs157b.hibernate.Player"/>
+         <mapping class="edu.cs157b.hibernate.Project"/>
+          <mapping class="edu.cs157b.hibernate.Member"/>
+           <mapping class="edu.cs157b.hibernate.Teacher"/>
+           <mapping class="edu.cs157b.hibernate.ContactInfo"/>
+  <mapping class="edu.cs157b.hibernate.PizzaOrder"/>
+  
+  <mapping class="edu.cs157b.hibernate.Department"/>
+         <mapping class="edu.cs157b.hibernate.Manager"/>
+        
+           
+  <mapping class="edu.cs157b.hibernate.Invoice"/> 
+  <mapping class="edu.cs157b.hibernate.MyOrder"/>
+  -->
+  
+  <!--<mapping class="sjsu.pizza.Customer"/>-->
+  
+  <mapping class="edu.cs157b.restful.Customer"/>
+  <mapping class="edu.cs157b.restful.Topping"/>
+  <mapping class="edu.cs157b.restful.Order"/>
+  <mapping class="edu.cs157b.restful.DiscountedOrder"/>
+  
+  
+  
+  
+</session-factory>
+</hibernate-configuration>
+
